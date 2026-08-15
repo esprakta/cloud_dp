@@ -36,7 +36,7 @@ Backend[⚙️ Сервер: Spring Boot 3] -->|JPA/Hibernate| DB[(🗄️ Postg
         Backend
         DB
         FS
-    ```end
+   end```
 
 Ключевые особенности:
 Аутентификация: Токен (auth-token) выдается при логине, сохраняется в cookies на фронтенде и передается в заголовках запросов через Axios interceptors.
