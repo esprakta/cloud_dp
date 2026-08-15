@@ -32,7 +32,7 @@ Backend[⚙️ Сервер: Spring Boot 3] -->|JPA/Hibernate| DB[(🗄️ Postg
 
  Backend -->|File I/O| FS[📁 Файловая система: /upload]
     
-    subgraph   "Docker  Environment"
+    subgraph   Docker  Environment
         Backend
         DB
         FS
