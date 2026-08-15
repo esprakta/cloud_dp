@@ -171,7 +171,7 @@ netology-diplom-frontend/                   # Frontend модуль
 │   ├── api/                                # Axios client и запросы
 │   ├── components/                         # Переиспользуемые UI компоненты
 │   └── views/                              # Страницы (Login, Home)
-│── package.json                             # Зависимости npm
+│── package.json                            # Зависимости npm
 └── .env                                    # Переменные окружения
 ```
 ## 👤 https://github.com/esprakta / @Delementa
