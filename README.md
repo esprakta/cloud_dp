@@ -13,7 +13,9 @@ docker-compose up
 
 ### Фронтенд:
 cd netology-diplom-frontend
+
 npm install
+
 npm run serve
 
 ## Доступ:
