@@ -3,7 +3,8 @@
 ## Структура проекта:
 
 - **cloud/** - бэкенд (Spring Boot + PostgreSQL)
-- **netology-diplom-frontend/** - фронтенд (Vue.js)
+-
+- - **netology-diplom-frontend/** - фронтенд (Vue.js)
 
 ## Запуск:
 
