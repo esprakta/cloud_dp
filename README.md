@@ -133,26 +133,45 @@ DevOps:
 
 ## 📂 Структура проекта
 ```
-cloud/                          # Backend модуль
-── src/main/java/netology/cloud/
-│   ├── config/                 # Конфигурация CORS и Security
-│   ├── controller/             # REST API endpoints
-│   ├── dto/                    # Data Transfer Objects
-│   ├── entity/                 # JPA Entities (User, File)
-│   ├── repository/             # Spring Data JPA интерфейсы
-│   └── service/                # Бизнес-логика
-├── src/test/                   # Unit и Integration тесты
-├── upload/                     # Директория для хранения файлов (игнорируется в Git)
-├── build.gradle                # Зависимости и настройки сборки
-├── Dockerfile                  # Образ для backend
-└── compose.yaml                # Оркестрация Backend + PostgreSQL
+cloud/                                      # Backend модуль
+├── src/main/java/netology/cloud/
+│   ├── CloudApplication.java               # Главный класс приложения
+│   ├── DataInitializer.java                # Инициализация данных (создание admin)
+│   ├── config/                             # Конфигурация CORS и Security
+│   │   └── WebConfig.java
+│   ├── controller/                         # REST API endpoints
+│   │   ├── CloudController.java
+│   │   └── GlobalExceptionHandler.java
+│   ├── dto/                                # Data Transfer Objects
+│   │   ├── FileInfo.java
+│   │   ├── LoginRequest.java
+│   │   ├── LoginResponse.java
+│   │   └── RenameFileRequest.java
+│   ├── entity/                             # JPA Entities
+│   │   ├── CloudFile.java
+│   │   └── User.java
+│   ├── exception/                          # Кастомные исключения
+│   │   └── UnauthorizedException.java
+│   ├── repository/                         # Spring Data JPA интерфейсы
+│   │   ├── FileRepository.java
+│   │   └── UserRepository.java
+│   └── service/                            # Бизнес-логика
+│       ├── AuthService.java
+│       ├── FileService.java
+│       └── UserService.java
+├── src/main/resources/
+│   └── application.yml                     # Конфигурация приложения
+├── src/test/                               # Unit и Integration тесты
+├── build.gradle                            # Зависимости и настройки сборки
+├── Dockerfile                              # Образ для backend
+└── compose.yaml                            # Оркестрация Backend + PostgreSQL
 
-netology-diplom-frontend/       # Frontend модуль
+netology-diplom-frontend/                   # Frontend модуль
 ├── src/
-│   ├── api/                    # Axios client и запросы
-│   ├── components/             # Переиспользуемые UI компоненты
-│   └── views/                  # Страницы (Login, Home)
-├── package.json
-└── .env                        # Переменные окружения
+│   ├── api/                                # Axios client и запросы
+│   ├── components/                         # Переиспользуемые UI компоненты
+│   └── views/                              # Страницы (Login, Home)
+── package.json                             # Зависимости npm
+└── .env                                    # Переменные окружения
 ```
 ## 👤 https://github.com/esprakta / @Delementa
