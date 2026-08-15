@@ -4,8 +4,8 @@
 REST API для облачного хранилища файлов с авторизацией пользователей.
 
 ## Технологии
-- Java 21
-- Spring Boot 4.1.0
+- Java 17
+- Spring Boot 3.2.5
 - Spring Data JPA
 - PostgreSQL 16
 - Docker & Docker Compose
