@@ -5,9 +5,8 @@
 [![Vue.js](https://img.shields.io/badge/Vue.js-3.x-4FC08D.svg)](https://vuejs.org/)
 [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-336791.svg)](https://www.postgresql.org/)
 [![Docker](https://img.shields.io/badge/Docker-Ready-2496ED.svg)](https://www.docker.com/)
-[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-Полнофункциональное облачное хранилище файлов, разработанное в качестве дипломного проекта. Приложение позволяет пользователям регистрироваться, авторизовываться и управлять своими файлами (загрузка, скачивание, переименование, удаление) через удобный веб-интерфейс.
+Полнофункциональное облачное хранилище файлов, разработанное в качестве дипломного проекта. Приложение позволяет пользователям авторизовываться и управлять своими файлами (загрузка, скачивание, переименование, удаление) через современный веб-интерфейс.
 
 ---
 
@@ -24,4 +23,16 @@
 
 ## 🏗 Архитектура приложения
 
-Приложение построено по классической клиент-серверной архитектуре с разделением ответственности:
+Приложение построено по классической клиент-серверной архитектуре с четким разделением ответственности:
+
+```mermaid
+graph TD
+    Client[🌐 Клиент: Vue.js 3 + TypeScript] -->|HTTP/REST API + Cookies| Backend
+    Backend[⚙️ Сервер: Spring Boot 3] -->|JPA/Hibernate| DB[(🗄️ PostgreSQL)]
+    Backend -->|File I/O| FS[📁 Файловая система: /upload]
+    
+    subgraph Docker Environment
+        Backend
+        DB
+        FS
+    end
