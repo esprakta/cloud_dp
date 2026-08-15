@@ -30,7 +30,8 @@ graph TD
     Backend[⚙️ Сервер: Spring Boot 3] -->|JPA/Hibernate| DB[(🗄️ PostgreSQL)]
     Backend -->|File I/O| FS[📁 Файловая система: /upload]
     
-    subgraph Docker Environment
+    subgraph
+Docker Environment
         Backend
         DB
         FS
