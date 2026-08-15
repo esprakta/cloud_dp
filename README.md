@@ -155,4 +155,4 @@ netology-diplom-frontend/       # Frontend модуль
 ├── package.json
 └── .env                        # Переменные окружения
 
-## 👤 
+## 👤 https://github.com/esprakta / @Delementa
