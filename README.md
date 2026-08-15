@@ -132,7 +132,7 @@ DevOps:
     ./gradlew test
 
 ## 📂 Структура проекта
-
+'''
 cloud/                          # Backend модуль
 ── src/main/java/netology/cloud/
 │   ├── config/                 # Конфигурация CORS и Security
@@ -154,5 +154,5 @@ netology-diplom-frontend/       # Frontend модуль
 │   └── views/                  # Страницы (Login, Home)
 ├── package.json
 └── .env                        # Переменные окружения
-
+'''
 ## 👤 https://github.com/esprakta / @Delementa
