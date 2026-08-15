@@ -26,7 +26,7 @@
 
 ```mermaid
 graph TD
-    Client[🌐 Клиент: Vue.js 3 + TypeScript] -->|HTTP/REST API + Cookies| Backend
+    Client[🌐 Клиент: Vue.js 3 + TypeScript]  -->  |HTTP/REST API + Cookies| Backend
     Backend[⚙️ Сервер: Spring Boot 3] -->|JPA/Hibernate| DB[(🗄️ PostgreSQL)]
     Backend -->|File I/O| FS[📁 Файловая система: /upload]
     
