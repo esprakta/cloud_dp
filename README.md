@@ -37,3 +37,4 @@ Backend[⚙️ Сервер: Spring Boot 3] -->|JPA/Hibernate| DB[(🗄️ Postg
         DB
         FS
    end
+```
